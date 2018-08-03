@@ -1,5 +1,5 @@
 {
-    "name": "mollie/reseller-api",
+    "name": "firstred/mollie-reseller-api",
     "description": "Mollie Reseller API",
     "homepage": "https://github.com/mollie/reseller-api",
     "license": "BSD-2-Clause",
@@ -7,6 +7,10 @@
         {
             "name": "Mollie B.V.",
             "email": "info@mollie.com"
+        },
+        {
+            "name": "Michael Dekker",
+            "email": "michael@snowycatsoftware.com"
         }
     ],
     "keywords": ["mollie","payment", "reseller", "service", "ideal", "creditcard", "mistercash", "bancontact", "sofort", "sofortbanking", "sepa", "bitcoin", "paypal", "paysafecard", "payments", "gateway"],
