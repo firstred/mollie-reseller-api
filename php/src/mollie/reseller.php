@@ -57,7 +57,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/account-claim', self::API_VERSION),
-            ["username" => $username, "password" => $password]
+            array("username" => $username, "password" => $password)
         );
     }
 
@@ -73,7 +73,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/account-valid', self::API_VERSION),
-            ["username" => $username, "password" => $password]
+            array("username" => $username, "password" => $password)
         );
     }
 
@@ -89,7 +89,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/account-create', self::API_VERSION),
-            ["username" => $username] + $fields
+            array("username" => $username) + $fields
         );
     }
 
@@ -106,7 +106,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/account-edit', self::API_VERSION),
-            ["username" => $username, "password" => $password] + $fields
+            array("username" => $username, "password" => $password) + $fields
         );
     }
 
@@ -122,7 +122,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/account-edit', self::API_VERSION),
-            ["partner_id_customer" => $partner_id_customer] + $fields
+            array("partner_id_customer" => $partner_id_customer) + $fields
         );
     }
 
@@ -138,7 +138,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/bankaccounts', self::API_VERSION),
-            ["username" => $username, "password" => $password]
+            array("username" => $username, "password" => $password)
         );
     }
 
@@ -153,7 +153,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/bankaccounts', self::API_VERSION),
-            ["partner_id_customer" => $partner_id_customer]
+            array("partner_id_customer" => $partner_id_customer)
         );
     }
 
@@ -171,7 +171,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/bankaccount-edit', self::API_VERSION),
-            ["username" => $username, "password" => $password, "id" => $id] + $fields
+            array("username" => $username, "password" => $password, "id" => $id) + $fields
         );
     }
 
@@ -188,7 +188,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/disconnect-account', self::API_VERSION),
-            ["username" => $username, "password" => $password, "partner_id_customer" => $partner_id_customer]
+            array("username" => $username, "password" => $password, "partner_id_customer" => $partner_id_customer)
         );
     }
 
@@ -204,7 +204,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/profiles', self::API_VERSION),
-            ["username" => $username, "password" => $password]
+            array("username" => $username, "password" => $password)
         );
     }
 
@@ -219,7 +219,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/profiles',self::API_VERSION),
-            ["partner_id_customer" => $partner_id_customer]
+            array("partner_id_customer" => $partner_id_customer)
         );
     }
 
@@ -237,7 +237,7 @@ class Mollie_Reseller extends Mollie_API
      */
     public function profileCreate($username, $password, $name, $website, $email, $phone, $category)
     {
-        $params = [
+        $params = array(
             "username" => $username,
             "password" => $password,
             "name"     => $name,
@@ -245,7 +245,7 @@ class Mollie_Reseller extends Mollie_API
             "email"    => $email,
             "phone"    => $phone,
             "category" => $category
-        ];
+        );
 
         return $this->performRequest(
             self::METHOD_POST,
@@ -267,14 +267,14 @@ class Mollie_Reseller extends Mollie_API
      */
     public function profileCreateByPartnerId($partner_id_customer, $name, $website, $email, $phone, $category)
     {
-        $params = [
+        $params = array(
             "partner_id_customer" => $partner_id_customer,
             "name"                => $name,
             "website"             => $website,
             "email"               => $email,
             "phone"               => $phone,
             "category"            => $category
-        ];
+        );
 
         return $this->performRequest(
             self::METHOD_POST,
@@ -295,7 +295,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/available-payment-methods', self::API_VERSION),
-            ["username" => $username, "password" => $password]
+            array("username" => $username, "password" => $password)
         );
     }
 
@@ -310,7 +310,7 @@ class Mollie_Reseller extends Mollie_API
         return $this->performRequest(
             self::METHOD_POST,
             sprintf('/api/reseller/v%d/available-payment-methods', self::API_VERSION),
-            ["partner_id_customer" => $partner_id_customer]
+            array("partner_id_customer" => $partner_id_customer)
         );
     }
 }
