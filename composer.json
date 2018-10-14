@@ -26,6 +26,7 @@
         "php" : ">=5.3.29",
         "ext-curl": "*",
         "ext-openssl": "*",
-        "ext-xml": "*"
+        "ext-xml": "*",
+        "composer/ca-bundle": "^1.1"
     }
 }

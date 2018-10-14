@@ -267,7 +267,7 @@ abstract class Mollie_API
              * On some servers, the list of installed certificates is outdated or not present at all (the ca-bundle.crt
              * is not installed). So we tell cURL which certificates we trust. Then we retry the requests.
              */
-            curl_setopt($ch, CURLOPT_CAINFO, dirname(__FILE__).DIRECTORY_SEPARATOR."cacert.pem");
+            curl_setopt($ch, CURLOPT_CAINFO, \Composer\CaBundle\CaBundle::getBundledCaBundlePath());
             $body = curl_exec($ch);
         }
 
