@@ -1,8 +1,11 @@
+> This is an unofficial PHP 5.3.29+ port of the Mollie Reseller PHP library. 
+>
+> It has been made compatible with PHP 5.3.29+ and is kept up to date with the official library.  
+> Guzzle has been swapped out for [PHP Curl Class](https://github.com/php-curl-class/php-curl-class) for the HTTP client.
+
 ![Mollie](https://www.mollie.com/files/Mollie-Logo-Style-Small.png)
 
 # Reseller API
-
-[![Build Status](https://travis-ci.org/mollie/reseller-api.svg?branch=master)](https://travis-ci.org/mollie/reseller-api)
 
 De [Reseller API](https://www.mollie.com/beheer/reseller/documentatie) kan gebruikt worden om nieuwe klanten aan te melden bij Mollie, om bestaande klanten aan uw reseller-account te koppelen en om instellingen van de door u aangebrachte klanten te wijzigen.
 
